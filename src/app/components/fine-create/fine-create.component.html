@@ -1,0 +1,18 @@
+<div class="my-3">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="driverName" class="form-label">driverName</label>
+          <input type="text" [(ngModel)]="formData.driverName" class="form-control" id="driverName" name="driverName" aria-describedby="emailHelp">
+          <label for="driverLicenseNo" class="form-label">driverLicenseNo</label>
+          <input type="text" [(ngModel)]="formData.driverLicenseNo" class="form-control" id="driverLicenseNo" name="driverLicenseNo" aria-describedby="emailHelp">
+          <label for="fineType" class="form-label">fineType</label>
+          <input type="text" [(ngModel)]="formData.fineType" class="form-control" id="fineType" name="fineType" aria-describedby="emailHelp">
+          <label for="status" class="form-label">status</label>
+          <input type="text" [(ngModel)]="formData.status" class="form-control" id="status" name="status" aria-describedby="emailHelp">
+          
+        </div>   
+        <button type="submit" class="btn btn-primary">Submit</button>
+        
+      </form>
+    </div>
+    

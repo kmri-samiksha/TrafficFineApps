@@ -1,0 +1,30 @@
+<div>
+    <app-fine-create [item]="selectedItem" (submitEvent)="onsubmitData($event)"></app-fine-create>
+</div>
+
+<div class="container">
+    <h2>Record Table</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>driving License No</th>
+          <th>Fine Type</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      
+
+      <tbody>
+        <tr *ngFor="let item of fines" >
+            <td>{{item.driverName}}</td>
+                      <td><span>{{item.driverLicenseNo}}</span></td>
+                      <td><span>{{item.fineType}}</span></td>
+                      <td><span><button class="btn btn-danger" (click)="onclick(item)">Edit</button></span></td>
+                      
+            
+            </tr>
+      </tbody>
+    </table>
+  </div>
+
