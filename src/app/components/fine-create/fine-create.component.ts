@@ -14,16 +14,8 @@ import { TrafficFineService } from '../../services/traffic-fine.service';
 export class FineCreateComponent implements OnChanges {
   constructor(private apiService: TrafficFineService) {}
 
-  options = ['Option 1', 'Option 2', 'Option 3'];
-  selectedOption: string = this.options[0]; // Default selection
-
-
   formData = {id: '', driverName: '', driverLicenseNo: '', fineType: '', status: '' };
 
-  // driverName:string="";
-  // driverLicenseNo:string="";
-  // fineType:string="";
-  // status:string="";
 @Input() item: any;
 @Output() submitEvent: EventEmitter<TrafficFine>=new EventEmitter();
 
