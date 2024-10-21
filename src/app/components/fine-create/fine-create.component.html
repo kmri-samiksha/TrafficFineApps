@@ -1,18 +1,34 @@
 <div class="my-3">
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="driverName" class="form-label">driverName</label>
-          <input type="text" [(ngModel)]="formData.driverName" class="form-control" id="driverName" name="driverName" aria-describedby="emailHelp">
-          <label for="driverLicenseNo" class="form-label">driverLicenseNo</label>
-          <input type="text" [(ngModel)]="formData.driverLicenseNo" class="form-control" id="driverLicenseNo" name="driverLicenseNo" aria-describedby="emailHelp">
-          <label for="fineType" class="form-label">fineType</label>
-          <input type="text" [(ngModel)]="formData.fineType" class="form-control" id="fineType" name="fineType" aria-describedby="emailHelp">
-          <label for="status" class="form-label">status</label>
-          <input type="text" [(ngModel)]="formData.status" class="form-control" id="status" name="status" aria-describedby="emailHelp">
+          <div class="input-container">
+            <label for="driverName" class="form-label">Driver Name</label>
+            <input type="text" [(ngModel)]="formData.driverName" class="form-control" id="driverName" name="driverName" aria-describedby="emailHelp" required >        
+            
+          </div>
+          <div class="input-container">
+            <label for="driverLicenseNo" class="form-label">Driver License No</label>
+            <input type="text" [(ngModel)]="formData.driverLicenseNo" class="form-control" id="driverLicenseNo" name="driverLicenseNo" aria-describedby="emailHelp">
+            
+          </div>
           
-        </div>   
-        <button type="submit" class="btn btn-primary">Submit</button>
+         
+            <app-dropdown [options]="options" (optionSelected)="onOptionSelected($event)"></app-dropdown>
+          
+       
+          
+            <app-status [statusoptions]="statusoptions" (statusOptionSelected)="onstatusOptionSelected($event)"></app-status>
+            
+         
+        </div>  
+        <p></p> 
+        <button type="submit" class="btn btn-primary resize">Submit</button>
         
       </form>
+     
     </div>
+
+    
+
+    
     

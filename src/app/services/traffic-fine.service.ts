@@ -16,7 +16,7 @@ export class TrafficFineService {
     return this.http.get<any>(this.apiUrl);
   }
 
-  getFine(id: number): Observable<TrafficFine> {
+  getFine(id: string): Observable<TrafficFine> {
     return this.http.get<TrafficFine>(`${this.apiUrl}/${id}`);
   }
 
@@ -28,7 +28,7 @@ export class TrafficFineService {
     return this.http.put<void>(`${this.apiUrl}/${fine.id}`, fine);
   }
 
-  deleteFine(id: number): Observable<void> {
+  deleteFine(id: string): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

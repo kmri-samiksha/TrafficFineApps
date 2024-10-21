@@ -1,5 +1,5 @@
 <div>
-    <app-fine-create [item]="selectedItem" (submitEvent)="onsubmitData($event)"></app-fine-create>
+    <app-fine-create [itemt]="selectedItem" (submitEvent)="onsubmitData($event)"></app-fine-create>
 </div>
 
 <div class="container">
@@ -10,7 +10,9 @@
           <th>Name</th>
           <th>driving License No</th>
           <th>Fine Type</th>
+          <th>Status</th>
           <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
       
@@ -20,7 +22,9 @@
             <td>{{item.driverName}}</td>
                       <td><span>{{item.driverLicenseNo}}</span></td>
                       <td><span>{{item.fineType}}</span></td>
+                      <td><span>{{item.status}}</span></td>
                       <td><span><button class="btn btn-danger" (click)="onclick(item)">Edit</button></span></td>
+                      <td><span><button class="btn btn-danger" (click)="onDeleteClick(item)">Delete</button></span></td>
                       
             
             </tr>

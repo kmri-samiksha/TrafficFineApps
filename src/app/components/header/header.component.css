@@ -1,0 +1,16 @@
+.app-header {
+    background-color:brown; 
+    color: white;
+    padding: 15px;
+    text-align: center; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .app-header h1 {
+    margin: 0; 
+    font-size: 24px;
+  }
+  p{
+    margin-top: 50px; 
+    font-size: 24px; 
+  }

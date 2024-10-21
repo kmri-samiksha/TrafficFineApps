@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+  }
+  
+  label {
+    margin-right: 10px; 
+    width: 30%;
+  }
+  p{
+    color:green;
+  }
+  .resize{
+    margin-top: 15px;
+    margin-left: 145px;
+    width: 150px;
+  }

@@ -1,0 +1,8 @@
+<div>
+    <label for="options">Choose Status: </label>
+    
+    <select id="statusoptions" (change)="onSelect($event)">
+      <option value="" disabled selected [value]="selectedStatusOptionTypes">{{ selectedStatusOptionTypes }}</option>>
+      <option *ngFor="let option of statusoptions" [value]="option">{{ option }}</option>
+    </select>
+  </div>

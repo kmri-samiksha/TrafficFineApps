@@ -1,16 +1,23 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-dropdown',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './dropdown.component.html',
-  styleUrl: './dropdown.component.css'
+  styleUrls: ['./dropdown.component.css'],
+  imports: [CommonModule],
+  standalone: true,
 })
-
 export class DropdownComponent {
-  @Output() selectionChange = new EventEmitter<string>();
-  
-  
+  @Input() options: string[] = [];
+  @Output() optionSelected = new EventEmitter<string>();
+
+  selectedOptionTypes: string | undefined='Select a FineType';
+
+  onSelect(event: Event) {
+    const selectElement = event.target as HTMLSelectElement;
+    this.selectedOptionTypes = selectElement.value;
+    this.optionSelected.emit(this.selectedOptionTypes);
+  }
+
 }
