@@ -8,7 +8,7 @@ import { TrafficFine } from '../models/traffic-fine';
 })
 export class TrafficFineService {
 
-  private apiUrl = 'https://localhost:7056/TrafficFine';//'https://localhost:5001/api/TrafficFine';
+  private apiUrl = 'https://trafficfineapi.onrender.com/TrafficFine';//'https://localhost:7056/TrafficFine';//'https://localhost:5001/api/TrafficFine';
 
   constructor(private http: HttpClient) { }
 
